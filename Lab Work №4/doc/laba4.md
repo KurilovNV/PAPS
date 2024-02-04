@@ -70,7 +70,7 @@ pm.test("Phrase and answer should be non-empty strings", function () {
 ```
 
 - рез-т тестов:
-Phrases_Tests
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Phrases_Tests.png)
 
 ## Метод GET /api/question/progress/{idUser}
 
@@ -88,8 +88,8 @@ Phrases_Tests
 ```
 В ответе выдается общее кол-во вопросов, кол-во решеных заданий и доля решенных заданий от общего кол-ва
 - Скрин из постмана:
-  Progress_Headers
-  Progress_BodyAn
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Progress_Headers.png)
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Progress_BodyAn.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {
@@ -116,8 +116,7 @@ pm.test("Percent is a percentage value between 0 and 1", function () {
 ```
 
 - рез-т тестов:
-Progress_Tests
-
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Progress_Tests.png)
 ## Метод GET /api/question/id
 
 - Этот метод возвращает задание.
@@ -134,8 +133,8 @@ Progress_Tests
 ```
 В ответе выдается фраза и ответ
 - Скрин из постмана:
-  Question_Headers
-  Question_BodyAn
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_Headers.png)
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_BodyAn.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {
@@ -162,8 +161,7 @@ pm.test("Content-Type header is application/json", function () {
 });
 ```
 - рез-т тестов:
-Question_Tests
-
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_Tests.png)
 ## Метод PUT /api/question/{id}
 
  Этот метод обновляет информацию о задании.
@@ -189,9 +187,8 @@ Question_Tests
   ```
 В ответе выдается измененное задание
 - Скрин из постмана:
-  UpdateQuestion_Headers
-  UpdateQuestion_Body
-
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/UpdateQuestion_Headers.png)
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/UpdateQuestion_Body.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {
@@ -222,8 +219,7 @@ pm.test("Content-Type header is application/json", function () {
 ```
 
 - рез-т тестов:
-UpdateQuestion_Tests
-
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/UpdateQuestion_Tests.png)
 ## Метод DELETE /api/question/{id}
 - Этот метод удаляет задание.
 - Параметры запроса:
@@ -237,8 +233,8 @@ UpdateQuestion_Tests
   }
   ```
 - Скрин из постмана:
- DeleteQuestion_Headers
- DeleteQuestion_Body
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/DeleteQuestion_Headers.png)
+  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/DeleteQuestion_Body.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {
@@ -261,7 +257,7 @@ pm.test("Message field is a non-empty string", function () {
 ```
 
 - рез-т тестов:
-DeleteQuestion_Tests
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/DeleteQuestion_Tests.png)
 
 ## Метод POST /api/question
 - Этот метод создает новое задание.
@@ -285,8 +281,8 @@ DeleteQuestion_Tests
 }
 ```
 - Скрин из постмана:
- PostQuestion_Headers
- PostQuestion_Body
+    ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/PostQuestion_Headers.png)
+    ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/PostQuestion_Body.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 201", function () {
@@ -316,4 +312,4 @@ pm.test("Answer is a non-empty string", function () {
 });
 ```
 - рез-т тестов:
-PostQuestion_Tests
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/PostQuestion_Tests.png)

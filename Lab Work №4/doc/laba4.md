@@ -29,8 +29,8 @@
 - В ответе выдается фразы и ответы на них.
 
 - Скрин из постмана:
-  Phrases_Headers
-  Phrases_BodyAn
+ ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Phrases_Headers.png)
+ ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Phrases_BodyAn.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {

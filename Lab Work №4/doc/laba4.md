@@ -134,7 +134,7 @@ pm.test("Percent is a percentage value between 0 and 1", function () {
 В ответе выдается фраза и ответ
 - Скрин из постмана:
 ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_Headers.png)
-![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_BodyAn.png)
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork4/Lab%20Work%20№4/doc/Question_Body.png)
 - Код теста:
 ```javascript
 pm.test("Response status code is 200", function () {

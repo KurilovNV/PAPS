@@ -91,13 +91,12 @@ Phrases_Tests
   Progress_Headers
   Progress_BodyAn
 - Код теста:
-  ```javascript
+```javascript
 pm.test("Response status code is 200", function () {
     pm.expect(pm.response.code).to.equal(200);
 });
 pm.test("TotalQuestions is a non-negative integer", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData.totalQuestions).to.be.a('number').and.to.satisfy((value) => value >= 0, "TotalQuestions must be a non-negative integer");
 });
@@ -109,13 +108,12 @@ pm.test("AnswerQuestions is a non-negative integer", function () {
 });
 pm.test("Percent is a percentage value between 0 and 1", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData.persent).to.be.a('number');
   pm.expect(responseData.persent).to.be.at.least(0);
   pm.expect(responseData.persent).to.be.at.most(1);
 });
-  ```
+```
 
 - рез-т тестов:
 Progress_Tests
@@ -139,34 +137,30 @@ Progress_Tests
   Question_Headers
   Question_BodyAn
 - Код теста:
-  ```javascript
+```javascript
 pm.test("Response status code is 200", function () {
     pm.response.to.have.status(200);
 });
 pm.test("Response has the required fields - idZad, phrase, and answer", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData).to.have.property('idZad');
   pm.expect(responseData).to.have.property('phrase');
   pm.expect(responseData).to.have.property('answer');
 });
 pm.test("IdZad is a non-negative integer", function () {
-    const responseData = pm.response.json();
-    
+    const responseData = pm.response.json(); 
     pm.expect(responseData.idZad).to.be.a('number').and.to.satisfy((id) => id >= 0, "IdZad should be a non-negative integer");
 });
 pm.test("Phrase is a non-empty string", function () {
     const responseData = pm.response.json();
-    
     pm.expect(responseData).to.be.an('object');
     pm.expect(responseData.phrase).to.be.a('string').and.to.have.lengthOf.at.least(1, "Phrase should not be empty");
 });
 pm.test("Content-Type header is application/json", function () {
     pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
 });
-  ```
-
+```
 - рез-т тестов:
 Question_Tests
 
@@ -199,8 +193,7 @@ Question_Tests
   UpdateQuestion_Body
 
 - Код теста:
-  ```javascript
-
+```javascript
 pm.test("Response status code is 200", function () {
     pm.expect(pm.response.code).to.equal(200);
 });
@@ -214,13 +207,11 @@ pm.test("Response has the required fields - idZad, phrase, and answer", function
 });
 pm.test("IdZad is a non-negative integer", function () {
   const responseData = pm.response.json();
-
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData.idZad).to.be.a('number').and.to.satisfy((num) => num >= 0, "IdZad should be a non-negative integer");
 });
 pm.test("Phrase and answer must be non-empty strings", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData.phrase).to.be.a('string').and.to.have.lengthOf.at.least(1, "Phrase should not be empty");
   pm.expect(responseData.answer).to.be.a('string').and.to.have.lengthOf.at.least(1, "Answer should not be empty");
@@ -228,7 +219,7 @@ pm.test("Phrase and answer must be non-empty strings", function () {
 pm.test("Content-Type header is application/json", function () {
     pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
 });
-  ```
+```
 
 - рез-т тестов:
 UpdateQuestion_Tests
@@ -241,16 +232,15 @@ UpdateQuestion_Tests
 - Пример запроса: DELETE /api/question/1
 - Пример ответа:
   ```json
-{
-    "message": "Задание Удалено"
-}
+  {
+   "message": "Задание Удалено"
+  }
   ```
 - Скрин из постмана:
  DeleteQuestion_Headers
  DeleteQuestion_Body
 - Код теста:
-  ```javascript
-
+```javascript
 pm.test("Response status code is 200", function () {
     pm.expect(pm.response.code).to.equal(200);
 });
@@ -259,22 +249,19 @@ pm.test("Content-Type header is application/json", function () {
 });
 pm.test("Response has a message field", function () {
     const responseData = pm.response.json();
-
     pm.expect(responseData).to.be.an('object');
     pm.expect(responseData.message).to.exist;
 });
 pm.test("Message field is a non-empty string", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData.message).to.be.a('string');
   pm.expect(responseData.message).to.have.lengthOf.at.least(1, "Message should not be empty");
 });
-  ```
+```
 
 - рез-т тестов:
 DeleteQuestion_Tests
-
 
 ## Метод `POST /api/question`
 - Этот метод создает новое задание.
@@ -301,13 +288,12 @@ DeleteQuestion_Tests
  PostQuestion_Headers
  PostQuestion_Body
 - Код теста:
-  ```javascript
+```javascript
 pm.test("Response status code is 201", function () {
     pm.expect(pm.response.code).to.equal(201);
 });
 pm.test("Response has the required fields - idZad, phrase, and answer", function () {
   const responseData = pm.response.json();
-  
   pm.expect(responseData).to.be.an('object');
   pm.expect(responseData).to.have.property('idZad');
   pm.expect(responseData).to.have.property('phrase');
@@ -315,22 +301,19 @@ pm.test("Response has the required fields - idZad, phrase, and answer", function
 });
 pm.test("IdZad is a non-negative integer", function () {
     const responseData = pm.response.json();
-    
     pm.expect(responseData).to.be.an('object');
     pm.expect(responseData.idZad).to.be.a('number');
     pm.expect(responseData.idZad).to.be.at.least(0);
 });
 pm.test("Phrase is a non-empty string", function () {
     const responseData = pm.response.json();
-    
     pm.expect(responseData).to.be.an('object');
     pm.expect(responseData.phrase).to.be.a('string').and.to.have.lengthOf.at.least(1, "Phrase should not be empty");
 });
 pm.test("Answer is a non-empty string", function () {
     const responseData = pm.response.json();
-    
     pm.expect(responseData.answer).to.be.a('string').and.to.have.lengthOf.at.least(1, "Answer should not be empty");
 });
-  ```
+```
 - рез-т тестов:
 PostQuestion_Tests

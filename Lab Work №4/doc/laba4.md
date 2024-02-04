@@ -263,7 +263,7 @@ pm.test("Message field is a non-empty string", function () {
 - рез-т тестов:
 DeleteQuestion_Tests
 
-## Метод `POST /api/question`
+## Метод POST /api/question
 - Этот метод создает новое задание.
 - Параметры запроса:
      phrase - фраза (тело запроса)

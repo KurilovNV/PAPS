@@ -32,17 +32,13 @@
   Phrases_Headers
   Phrases_BodyAn
 - Код теста:
-  ```javascript
+```javascript
 pm.test("Response status code is 200", function () {
     pm.expect(pm.response.code).to.equal(200);
 });
-
-
 pm.test("Content-Type header is application/json", function () {
     pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
 });
-
-
 pm.test("Validate the structure of the response object", function () {
     const responseData = pm.response.json();
     
@@ -54,8 +50,6 @@ pm.test("Validate the structure of the response object", function () {
         pm.expect(item.answer).to.exist.and.to.be.a('string');
     });
 });
-
-
 pm.test("IdZad is a non-negative integer", function () {
     const responseData = pm.response.json();
 
@@ -64,8 +58,6 @@ pm.test("IdZad is a non-negative integer", function () {
         pm.expect(item.idZad).to.be.a('number').and.to.satisfy((num) => num >= 0, "IdZad should be a non-negative integer");
     });
 });
-
-
 pm.test("Phrase and answer should be non-empty strings", function () {
   const responseData = pm.response.json();
   
@@ -75,7 +67,7 @@ pm.test("Phrase and answer should be non-empty strings", function () {
     pm.expect(item.answer).to.be.a('string').and.to.have.lengthOf.at.least(1, "Answer should not be empty");
   });
 });
-  ```
+```
 
 - рез-т тестов:
 Phrases_Tests

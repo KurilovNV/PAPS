@@ -182,9 +182,9 @@ Question_Tests
 - Пример ответа:
   ```json
   {
-    "id": 1,
-    "name": "Updated Well",
-    "depth": 1500
+      "idZad": 1,
+      "phrase": "dsg",
+      "answer": "sd"
   }
   ```
 В ответе выдается измененное задание

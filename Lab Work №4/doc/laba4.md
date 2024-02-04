@@ -270,20 +270,20 @@ DeleteQuestion_Tests
      answer - ответ на фразу (тело запроса)
 - Пример запроса: POST /api/question
 - Пример запроса:
- ```json
+```json
 {
   "phrase": "ds",
   "answer": "dsdsdsd"
 }
 ```
 - Пример ответа:
-  ```json
+```json
 {
     "idZad": 4,
     "phrase": "ds",
     "answer": "dsdsdsd"
 }
-  ```
+```
 - Скрин из постмана:
  PostQuestion_Headers
  PostQuestion_Body

@@ -1,7 +1,7 @@
 # Лабораторная работа 3
 
 # Диаграмма компонентов
- ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма компонентов.png)
+ ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма%20компонентов.png)
 
 
  # Диаграмма последовательностей
@@ -9,7 +9,7 @@
 
 
 # Модель БД
- ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/База данных.png)
+ ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/База%20данных.png)
 
  # Применение основных принципов разработки
  ## DRY.

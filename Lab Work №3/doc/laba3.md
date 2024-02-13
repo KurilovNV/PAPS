@@ -18,15 +18,15 @@
   После этого функция сравнивает оба ответа и возвращает результат сравнения.
   Такая реализация позволяет избежать дублирования кода при сравнении ответов на различные задания, соответствуя принципу DRY.
   ```c#
-       class TaskChecker
-{
+  class TaskChecker
+  {
     public static bool CheckAnswer(string proposedAnswer, string correctAnswer)
     {
         string proposedAnswerLower = proposedAnswer.ToLower();
         string correctAnswerLower = correctAnswer.ToLower();
         return proposedAnswerLower == correctAnswerLower;
-    }
-}
+     }
+  }
   ```
 
   - ## YAGNI.
@@ -54,27 +54,26 @@
             }
         }
     }
-}
     ```
     
   - ## KISS
   Функция AddNoiseToAudio принимает массив байтов, представляющий аудио файл, и просто выводит сообщение о добавлении шума к аудио файлу. Нет излишней сложности или деталей, это соответствует принципу KISS.
     ```c#
-class AudioProcessor
-{
-    public static byte[] AddNoiseToAudio(byte[] audioData)
+    class AudioProcessor
     {
-        Console.WriteLine("Noise added to audio file.");
-        Random random = new Random();
-        byte[] noise = new byte[audioData.Length];
-        random.NextBytes(noise);
-        for (int i = 0; i < audioData.Length; i++)
+        public static byte[] AddNoiseToAudio(byte[] audioData)
         {
-            audioData[i] = (byte)(audioData[i] ^ noise[i]);
+            Console.WriteLine("Noise added to audio file.");
+            Random random = new Random();
+            byte[] noise = new byte[audioData.Length];
+            random.NextBytes(noise);
+            for (int i = 0; i < audioData.Length; i++)
+            {
+                audioData[i] = (byte)(audioData[i] ^ noise[i]);
+            }
+            return audioData;
         }
-        return audioData;
-    }
-}
+     }
     ```
 
   
@@ -83,38 +82,38 @@ class AudioProcessor
 Класс User представляет собой модель пользователя.
 Каждый класс отвечает за свою область ответственности, что соответствует принципу единственной обязанности (Single Responsibility Principle) из SOLID.
   ```c#
-    class UserRepository
-{
-    private string _filePath;
-
-    public UserRepository(string filePath)
-    {
-        _filePath = filePath;
-    }
-    public void SaveUser(User user)
-    {
-        List<User> users = LoadUsers();
-        users.Add(user);
-        SaveUsers(users);
-    }
-    public List<User> LoadUsers()
-    {
-        if (!File.Exists(_filePath))
-            return new List<User>();
-
-        string json = File.ReadAllText(_filePath);
-        return JsonConvert.DeserializeObject<List<User>>(json);
-    }
-
-    private void SaveUsers(List<User> users)
-    {
-        string json = JsonConvert.SerializeObject(users);
-        File.WriteAllText(_filePath, json);
-    }
-}
-class User
-{
-    public long ChatId { get; set; }
-    public string Username { get; set; }
-}
+  class UserRepository
+  {
+       private string _filePath;
+   
+       public UserRepository(string filePath)
+       {
+           _filePath = filePath;
+       }
+       public void SaveUser(User user)
+       {
+           List<User> users = LoadUsers();
+           users.Add(user);
+           SaveUsers(users);
+       }
+       public List<User> LoadUsers()
+       {
+           if (!File.Exists(_filePath))
+               return new List<User>();
+   
+           string json = File.ReadAllText(_filePath);
+           return JsonConvert.DeserializeObject<List<User>>(json);
+       }
+   
+       private void SaveUsers(List<User> users)
+       {
+           string json = JsonConvert.SerializeObject(users);
+           File.WriteAllText(_filePath, json);
+       }
+   }
+  class User
+  {
+      public long ChatId { get; set; }
+      public string Username { get; set; }
+  }
   ```

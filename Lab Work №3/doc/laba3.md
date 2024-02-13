@@ -58,7 +58,7 @@
     
   ## KISS
   Функция AddNoiseToAudio принимает массив байтов, представляющий аудио файл, и просто выводит сообщение о добавлении шума к аудио файлу. Нет излишней сложности или деталей, это соответствует принципу KISS.
-    ```c#
+ ```c#
     class AudioProcessor
     {
         public static byte[] AddNoiseToAudio(byte[] audioData)
@@ -74,7 +74,7 @@
             return audioData;
         }
      }
-    ```
+```
 
   
 ## SOLID:

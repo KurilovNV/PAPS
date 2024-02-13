@@ -36,7 +36,7 @@
   Выполняется GET-запрос к API сформированным URL.
   Полученный ответ проверяется на наличие ошибок.
   Это минимальная реализация функции для отправки сообщения, соответствующая принципу YAGNI (You Ain't Gonna Need It).
-    ```c#
+ ```c#
     public static void SendMessage(long chatId, string message)
     {
         string apiUrl = $"https://api.telegram.org/bot{BotToken}/sendMessage?chat_id={chatId}&text={WebUtility.UrlEncode(message)}";
@@ -54,7 +54,7 @@
             }
         }
     }
-    ```
+  ```
     
   ## KISS
   Функция AddNoiseToAudio принимает массив байтов, представляющий аудио файл, и просто выводит сообщение о добавлении шума к аудио файлу. Нет излишней сложности или деталей, это соответствует принципу KISS.

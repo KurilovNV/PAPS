@@ -2,6 +2,9 @@
 
 # Диаграмма компонентов
  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма%20компонентов.png)
+ 
+# Диаграмма последовательности
+![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма%20последовательности.png)
 
 # Модель БД
  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/База%20данных.png)

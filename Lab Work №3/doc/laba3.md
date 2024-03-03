@@ -3,9 +3,26 @@
 # Диаграмма компонентов
  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма%20компонентов.png)
  
+ - Data Validation module:
+Description: Модуль для предварительной обработки данных.
+Implementation Details:
+Проверка сообщения пользователя.
+- GenerateQuestion module:
+Description: Модуль для генерации вопроса.
+Implementation Details:
+Обработка задания по настройкам от пользователя.
+- GenerateNoise module:
+Description: Модуль для наложения шума.
+Implementation Details:
+Накладывает шум для имитации звука рации.
+- GenerateAccents module:
+Description: Модуль для наложения акцента.
+Implementation Details:
+Накладывает акцент на воспроизведение фразы.
+  
 # Диаграмма последовательности
 ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/Диаграмма%20последовательности.png)
-
+- При выполнении упражнения сообщения с ответами пользователя проверяются сервером, но не только на правильность самого сообщения, а в том числе и на правильность ответа. Далее отправляется запрос в базу данных за получением нужной фразы, на которую накладывается акцент с помощью стороннего сервиса, затем накладывается шум. Затем бот генерирует фидбек-ответ пользователю.
 # Модель БД
  ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork3/Lab%20Work%20№3/doc/База%20данных.png)
 

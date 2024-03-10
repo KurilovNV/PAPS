@@ -21,24 +21,11 @@ class SpeakingLessonFactory : LessonFactory
         return new SpeakingLesson();
     }
 }
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        LessonFactory vocabularyFactory = new VocabularyLessonFactory();
-        LessonFactory speakingFactory = new SpeakingLessonFactory();
-
-        Lesson vocabularyLesson = vocabularyFactory.CreateLesson();
-        Lesson speakingLesson = speakingFactory.CreateLesson();
-
-        vocabularyLesson.Learn();
-        speakingLesson.Learn();
-    }
-}
 ```
 Код включает в себя реализацию шаблона проектирования "Фабричный метод". Этот шаблон позволяет делегировать создание экземпляров классов наследников суперкласса самим наследникам, что позволяет избежать прямой зависимости между клиентским кодом и конкретными классами, которые создаются.
 В данном случае абстрактный класс LessonFactory определяет метод CreateLesson(), который должны реализовать его подклассы. Каждая конкретная фабрика, такая как VocabularyLessonFactory и SpeakingLessonFactory, реализует этот метод, создавая соответствующие уроки.
+
+
 ![Image alt](https://github.com/KurilovNV/PAPS/blob/LabWork6/Lab%20Work%20№6/doc/Factory.png)
 
 2. Абстрактная фабрика (Abstract Factory):
